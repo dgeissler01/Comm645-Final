@@ -1,3 +1,9 @@
+# Git won't ignore package-lock.json or package.json
+# I used git rm package.json and the like to ignore them but they
+# were removed entirely from the project.
+# after reading on multiple sites, it looks like we should keep the
+# files in case there are file changes in the future, or devs have different
+# versions of packages.
 node_modules/
 package-lock.json
 package.json
