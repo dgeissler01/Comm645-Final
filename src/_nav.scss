@@ -1,0 +1,128 @@
+figure {
+    width: 400px;
+    height: 190px;
+    background: $figbg;
+    float: left;
+    display: block;
+    margin: 0;
+    @include break(959px) {
+        width: inherit;
+        height: 140px;
+        float: none;
+        background-position: center;
+    }
+    @include break(459px) {
+        background-size: contain;
+        height: 100px;
+    }
+}
+
+nav {
+    width: 540px;
+    height: 190px;
+    float: left;
+    text-align: right;
+    @include break(959px) {
+        width: inherit;
+        height: 50px;
+        float: none;
+        text-align: center;
+    }
+    @include break(459px) {
+        margin-bottom: 40px !important;
+    }
+    ul {
+        list-style-type: none;
+        margin-top: 95px;
+        @include break(959px) {
+            margin-top: 0;
+        }
+        li {
+            display: inline;
+            font-size: 0.8em;
+            margin-right: 10px;
+            @include break(959px) {
+                font-size: 1em;
+                margin: 0 10px;
+            }
+            @include break(767px) {
+                font-size: 0.8em;
+                margin: 0 5px;
+            }
+            a {
+                color: $navA;
+                text-decoration: none;
+                margin-top: 10px;
+                &:hover {
+                    color: $navHover;
+                }
+            }
+        }
+    }
+}
+
+header {
+    width: inherit;
+    clear: both;
+    text-align: center;
+    padding-top: 40px;
+    div {
+            min-height: 570px;
+            max-width: 100%;
+            @include devices("../images/devices.png", auto);
+            @include break(767px){
+                margin-bottom: 100px;
+            }
+            @include break(459px) {
+                margin-bottom: 80px;
+            }
+    }
+    h1 {
+        color: $head1;
+        font-weight: 100;
+        font-size: 4em;
+        line-height: 0;
+        @include break(959px) {
+            font-size: 3em;
+        }
+        @include break(767px) {
+            font-size: 2em;
+        }
+        &:first-child {
+            @include break(459px) {
+                font-size: 1.4em;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    h2 {
+        color: $head2;
+        font-weight: 900;
+        font-size: 2.5em;
+        line-height: 0;
+        margin-bottom: 70px;
+        @include break(959px) {
+            font-size: 1.5em;
+        }
+        @include break(767px) {
+            font-size: 1em;
+        }
+        @include break(459px) {
+            font-size: 1.4em;
+        }
+    }
+    h3{
+        color: $head3;
+        font-weight: 400;
+        font-size: 2em;
+        line-height: 0;
+        margin-bottom: 50px;
+        @include break(767px) {
+            font-size: 1.5em;
+        }
+        @include break(459px) {
+            color: $head2;
+            font-size: 1em;
+        }
+    }
+}

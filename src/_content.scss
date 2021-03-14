@@ -1,0 +1,87 @@
+#headline {
+    width:100%;
+    height: 130px;
+    background: $contentbg;
+    text-align: center;
+    margin: 0 auto;
+    h1{
+        color: $head2;
+        font-size: 2.5em;
+        font-weight: 100;
+        padding-top: 50px;
+        @include break(767px) {
+            font-size: 2em;
+            padding-top: 50px;
+        }
+        @include break(459px) {
+            font-size: 1.5em;
+            padding-top: 30px;
+        }
+    }
+}
+#content {
+    width:940px;
+    margin: 20px auto;
+    @include break(959px) {
+        width: inherit;
+    }
+    h3 {
+        color: $head3;
+        font-size: 2em;
+        font-weight: 400;
+        @include break(459px) {
+            font-size: 1.6em;
+        }
+    }
+    #products {
+        width: 460px;
+        float: left;
+        @include break(959px) {
+            width: 46%;
+            margin: 0 2%;
+        }
+        @include break(767px) {
+            width: 96%;
+            margin: 0 2%;
+            float: none;
+        }
+        // CAN'T GET THIS TO WORK. MIXIN IS SAME AS WORKING NAV BUT DOESN'T WORK
+        // article {
+        //     margin-bottom: 40px;
+        //     div {
+        //         min-height: 170px;
+                
+        //             @include prospect("../images/vprospect.png", 170px)
+                
+        //     }
+        //     div {
+        //         .convert {
+        //             @include convert("../images/vconvert.png", 170px)
+        //         }
+        //     }
+        // } 
+        img{
+            float: left;
+            margin-right: 20px;
+            @include break(459px) {
+                display: none;
+            }
+        }
+        h4 {
+            line-height: 1em;
+        }
+        #testimonials {
+            width: 460px;
+            float: right;
+            @include break(959px) {
+                width: 46%;
+                margin: 0 2%;
+            }
+            @include break(767px) {
+                width: 96%;
+                margin: 0 2%;
+                float: none;
+            }
+        }
+    }
+}

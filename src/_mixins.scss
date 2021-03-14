@@ -1,0 +1,34 @@
+// written like a function
+// @mixin ***($***) {
+//     Enter code block to be called
+// }
+// use @include ***() to call function
+
+// use @include in _nav.scss
+@mixin devices($image, $height: auto) {
+    background-image: url($image);
+    max-width: 100%;
+    height: $height;
+}
+
+// use @include in _content.scss
+@mixin prospect($image, $height: auto) {
+    background-image: url($image);
+    float: left;
+    margin-right: 20px;
+    height: $height;
+}
+
+@mixin convert($image, $height: auto) {
+    background-image: url($image);
+    float: left;
+    margin-right: 20px;
+    height: $height;
+}
+
+// MEDIA QUERY MIXIN
+@mixin break($width) {
+    @media screen and (max-width: $width) {
+        @content;
+    }
+}
